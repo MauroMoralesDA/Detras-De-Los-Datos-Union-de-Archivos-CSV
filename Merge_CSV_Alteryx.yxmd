@@ -1,0 +1,192 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2023.2" RunE2="T">
+  <Nodes>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Directory.Directory">
+        <Position x="126" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Directory>C:\Users\DELL\Documents\Data\CSV\Data</Directory>
+          <FileSpec>*.csv</FileSpec>
+          <IncludeSubDirs value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dir C:\Users\DELL\Documents\Data\CSV\Data\*.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDirectory" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicInput.DynamicInput">
+        <Position x="258" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <InputConfiguration>
+            <Configuration>
+              <Passwords />
+              <File RecordLimit="" SearchSubDirs="False" FileFormat="0" OutputFileName="">C:\Users\DELL\Documents\Data\CSV\Data\D1\Dat6 - Copy (2) - Copy - Copy.csv</File>
+              <FormatSpecificOptions>
+                <HeaderRow>True</HeaderRow>
+                <IgnoreErrors>False</IgnoreErrors>
+                <AllowShareWrite>False</AllowShareWrite>
+                <ImportLine>1</ImportLine>
+                <FieldLen>254</FieldLen>
+                <SingleThreadRead>False</SingleThreadRead>
+                <IgnoreQuotes>DoubleQuotes</IgnoreQuotes>
+                <Delimeter>,</Delimeter>
+                <QuoteRecordBreak>False</QuoteRecordBreak>
+                <CodePage>28591</CodePage>
+              </FormatSpecificOptions>
+            </Configuration>
+          </InputConfiguration>
+          <Mode>ReadList</Mode>
+          <ReadList_Field>FullPath</ReadList_Field>
+          <ReadList_Type>Path</ReadList_Type>
+          <ErrorBehaviour>Error</ErrorBehaviour>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <AnnotationText>Merge files from Directory</AnnotationText>
+          <DefaultAnnotationText />
+          <Left value="True" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="366" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="0">C:\Users\DELL\Documents\Data\CSV\Output\combined_Alteryx.csv</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <LineEndStyle>CRLF</LineEndStyle>
+            <Delimeter>,</Delimeter>
+            <ForceQuotes>False</ForceQuotes>
+            <HeaderRow>True</HeaderRow>
+            <CodePage>28591</CodePage>
+            <WriteBOM>True</WriteBOM>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>combined_Alteryx.csv</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="114" y="18" width="612" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text><![CDATA[CSV Files Merge ]]></Text>
+          <Font name="Poppins SemiBold" size="18" style="1" />
+          <TextColor name="White" />
+          <FillColor r="31" g="48" b="147" />
+          <Shape shape="0" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="30" y="18" width="120" height="36" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text />
+          <Font name="Arial" size="8.25" style="0" />
+          <TextColor name="Black" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+          <BG_Image>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</BG_Image>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <SortedGrouping value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Merge_CSV</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="a822e688-0ee3-423e-ac2e-97a427389639" />
+      <Telemetry>
+        <PreviousWorkflowId value="cd69b8b1-996b-4c94-80a0-efe4fd83578b" />
+        <OriginWorkflowId value="cd69b8b1-996b-4c94-80a0-efe4fd83578b" />
+      </Telemetry>
+      <PlatformWorkflowId value="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
